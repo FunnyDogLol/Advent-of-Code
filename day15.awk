@@ -17,7 +17,7 @@ function hashmath(word) {
 	return sum
 }
 
-#convert single character to ascii
+#run function on each string in the csv file
 {
 	anssum = 0
 	stringnum = split($0, strings, ",")
