@@ -24,7 +24,7 @@ def findwins(scratch: list, wins: list, num: int) -> list:
     return ret
 
 
-def recfunc(scratchlines, winlines, num):
+def recfunc(scratchlines: list, winlines: list, num: int):
     global ans
 
     try:
