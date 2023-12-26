@@ -15,10 +15,9 @@ def findwins(scratch: list, wins: list, num: int) -> list:
     global ans
     ans += 1
     ret = []
-    newnum = num
     for i in scratch:
         if i in wins:
-            newnum += 1
+            num += 1
             ret.append(newnum)
 
     return ret
