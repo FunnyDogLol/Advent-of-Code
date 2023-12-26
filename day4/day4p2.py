@@ -24,11 +24,8 @@ def findwins(scratch: list, wins: list, num: int) -> list:
 
 
 def recfunc(scratchlines: list, winlines: list, num: int):
-    try:
-        for val in findwins(scratchlines[num], winlines[num], num + 1):
-            recfunc(scratchlines, winlines, val - 1)
-    except:
-       pass
+    for val in findwins(scratchlines[num], winlines[num], num + 1):
+        recfunc(scratchlines, winlines, val - 1)
 
     return
 
