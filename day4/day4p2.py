@@ -18,7 +18,7 @@ def findwins(scratch: list, wins: list, num: int) -> list:
     for i in scratch:
         if i in wins:
             num += 1
-            ret.append(newnum)
+            ret.append(num)
 
     return ret
 
