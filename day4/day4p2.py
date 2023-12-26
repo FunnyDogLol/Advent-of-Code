@@ -25,8 +25,6 @@ def findwins(scratch: list, wins: list, num: int) -> list:
 
 
 def recfunc(scratchlines: list, winlines: list, num: int):
-    global ans
-
     try:
         for val in findwins(scratchlines[num], winlines[num], num + 1):
             recfunc(scratchlines, winlines, val - 1)
