@@ -17,9 +17,16 @@ for code in authcode:
         prefix = code.split("-")[0]
         boxes[num] = [val for val in boxes[num] if not val.startswith(prefix)]
     else:
-        num = hashmath(code.split("=")[0])
-        boxes[num] = [val for val in boxes[num] if not val.startswith(code.split("=")[0])]
-        boxes[num].append(code)
+        scode = code.split("=")[0]
+        num = hashmath(scode)
+        rep = False
+
+        for val in boxes[num]:
+            if scode in val:
+                boxes[num][boxes[num].index(val)] = code
+                rep = True
+        if not rep:
+            boxes[num].append(code)
 
 ans = 0
 for i in range(256):
