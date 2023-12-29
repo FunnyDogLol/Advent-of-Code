@@ -23,6 +23,7 @@ for code in authcode:
             if scode in val:
                 boxes[num][boxes[num].index(val)] = code
                 rep = True
+                Break
         if not rep:
             boxes[num].append(code)
 
