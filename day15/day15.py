@@ -1,8 +1,6 @@
 with open("authcode", "r") as file:
     authcode = file.read().strip().split(",")
 
-print(len(authcode))
-
 def hashmath(word):
     ret = 0
     for char in word:
