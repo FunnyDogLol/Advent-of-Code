@@ -14,7 +14,7 @@ ptime = 0
 while ptime < times[0]:
     ptime += 1
     j -= 1
-    sdist = ptime * (int(times[0]) - ptime)
+    sdist = ptime * (times[0] - ptime)
     edist = j * (times[1] - j)
     if sdist >= times[1]:
         start = ptime
