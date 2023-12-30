@@ -3,8 +3,7 @@ with open(r"times") as file:
 
 for i in range(2):
     times[i] = times[i].strip().split()
-    times[i].pop(0)
-    times[i] = int(''.join(times[i]))
+    times[i] = int(''.join(times[i][1:]))
 
 start = False
 end = False
